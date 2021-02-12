@@ -8,7 +8,6 @@ import {
   Nunito_400Regular,
 } from "@expo-google-fonts/nunito";
 import { ActionSheetProvider } from "@expo/react-native-action-sheet";
-import { AppLoading } from "expo";
 import { Asset } from "expo-asset";
 
 import { colors, icons, images } from "./styleguide";
@@ -23,7 +22,7 @@ export default function App() {
   });
   let imagesLoaded = useImages({ ...icons, ...images });
   if (!fontsLoaded || !imagesLoaded) {
-    return <AppLoading />;
+    return null;
   }
 
   return (
